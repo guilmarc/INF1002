@@ -1,0 +1,43 @@
+//  Alive.java        
+//	Author: Marco Choinière-Guillemette
+//	Automne 2015
+//  Alive abstract class
+//********************************************************************
+
+abstract class Alive implements Comparable<Alive> {
+	
+	protected String name;
+	protected Element element;
+	protected byte complexity;
+	
+	Alive(byte complexity) throws ComplexityException{
+		if (complexity < 1 || complexity > 10) {
+			throw new ComplexityException("Invalid complexity (" + complexity + ")" );
+		}
+		this.complexity = complexity;
+	}
+	
+	abstract void move();
+	
+	public int compareTo(Alive o) {
+		final int LOWER = -1;
+	    final int EQUAL = 0;
+	    final int HIGHER = 1;
+
+	    if (this.complexity > o.complexity)
+	    	return HIGHER;
+	    
+	    if (this.complexity < o.complexity)
+	    	return LOWER;
+	    
+	    return EQUAL;
+	}
+	
+	@Override 
+	public boolean equals(Object aThat) {
+	     if (this == aThat) return true;
+	     if (!(aThat instanceof Alive)) return false;
+
+	     return this.name == ((Alive)aThat).name;
+	}
+}

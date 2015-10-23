@@ -1,0 +1,14 @@
+//  Alive.java        
+//	Author: Marco Choinière-Guillemette
+//	Automne 2015
+//  Alive abstract class
+//********************************************************************
+
+abstract class Alive {
+	
+	protected String name;
+	protected byte complexity;
+	
+	abstract String move();
+	
+}

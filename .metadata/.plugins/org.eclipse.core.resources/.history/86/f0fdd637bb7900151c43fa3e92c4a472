@@ -1,0 +1,11 @@
+//  Homework5.java        
+//	Author: Marco Choinière-Guillemette
+//	Automne 2015
+//  Utilisation de l’héritage, du polymorphisme et des exceptions
+//********************************************************************
+
+public class Homework5 {
+	public static void main(String[] args){
+		new Animal("cat", 5, Element.EARTH, true, false);
+	}
+}

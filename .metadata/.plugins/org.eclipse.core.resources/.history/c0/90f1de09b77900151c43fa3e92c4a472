@@ -1,0 +1,6 @@
+
+public enum Element {
+	WATER,
+	EARTH,
+	EARTH_AIR;
+}

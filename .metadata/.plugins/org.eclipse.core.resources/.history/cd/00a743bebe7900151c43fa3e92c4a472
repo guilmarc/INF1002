@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+
+//  Homework5.java        
+//	Author: Marco Choinière-Guillemette
+//	Automne 2015
+//  Utilisation de l’héritage, du polymorphisme et des exceptions
+//********************************************************************
+
+public class Homework5 {
+	public static void main(String[] args){
+		/*
+		Vous faites aussi un programme pilote. Le programme pilote permettra de constituer un
+		tableau d’objets de type Vivant. Il permettra aussi d’afficher les éléments du tableau,
+		de trier le tableau, de rechercher un élément dans le tableau.
+		La séquence d’opérations est la suivante :
+		
+		• Afficher les éléments du tableau ;
+		• Trier le tableau selon la complexité ;
+		• Afficher de nouveau les éléments du tableau ;
+		• Chercher un élément qui se trouve dans le tableau à partir d’un nom ;
+		• Chercher un élément qui ne se trouve pas dans le tableau. 
+		*/
+		
+		public ArrayList<Alive> Alives = new ArrayList<Alive>();
+		
+		
+		//• Mettre les objets dans le tableau : vous devez intercepter l’exception ComplexitéIncorrecte ;
+		try {
+			
+			Alives.add(new Animal("cat", 5, Element.EARTH, true, false));
+			
+			
+			
+			
+			
+		} catch (ComplexityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
