@@ -1,15 +1,15 @@
 //  City.java        
-//	Author: Marco Choinière-Guillemette
+//	Author: Marco Choinière-Guillemette & Mélyna Lachance
 //	Automne 2015
 //  City class
 //********************************************************************
 
 public class City implements Comparable<City> {
 	
-	public String name;
-	public Boolean academic;
-	public String country;
-	public int population;
+	private String name;
+	private Boolean academic;
+	private String country;
+	private int population;
 	
 	City(String name, Boolean universitary, String country, int population){
 		this.name = name;
@@ -18,9 +18,13 @@ public class City implements Comparable<City> {
 		this.population = population;
 	}
 	
+	public String getName(){
+		return this.name;
+	}
+	
 	//public method to get the academic variable
 	public Boolean getAcademic(){
-		return academic;
+		return this.academic;
 	}
 
 	 //public method to set the population variable

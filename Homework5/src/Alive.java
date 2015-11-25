@@ -35,11 +35,11 @@ abstract class Alive implements Comparable<Alive> {
 	}
 	
 	@Override 
-	public boolean equals(Object aThat) {
-	     if (this == aThat) return true;
-	     //if (!(aThat instanceof Alive)) return false;
-
-	     return this.name == ((Alive)aThat).name;
+	public boolean equals(Object o) {
+	     if (this == o) return true;
+	     if (!(o instanceof Alive)) return false;
+	    
+	     return this.name.equalsIgnoreCase(((Alive)o).name);// Don't bother with cases.
 	}
 	
 	private String complexityToString(){
